@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/JerichoAguilar/to_do_list_project/issues"
   },
-  "homepage": "https://github.com/JerichoAguilar/to_do_list_project#readme"
+  "homepage": "https://github.com/JerichoAguilar/to_do_list_project#readme",
+  "devDependencies": {
+    "http-server": "^13.0.2",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  }
 }
