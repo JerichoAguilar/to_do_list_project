@@ -1,0 +1,29 @@
+{
+  "name": "to_do_list_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerichoAguilar/to_do_list_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JerichoAguilar/to_do_list_project/issues"
+  },
+  "homepage": "https://github.com/JerichoAguilar/to_do_list_project#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "http-server": "^13.0.2",
+    "lodash": "^4.17.21",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.42.1",
+    "uuid": "^8.3.2"
+  }
+}
