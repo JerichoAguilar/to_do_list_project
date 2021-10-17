@@ -1,7 +1,4 @@
 import homePage from "../pages/homePage";
-import loginPage from "../pages/loginPage";
-import signUpPage from "../pages/signUpPage";
-
 /* 
     Object 
     Routes  
@@ -12,9 +9,8 @@ import signUpPage from "../pages/signUpPage";
  
 
 const routes = {
-    '/':homePage(),
-    '/login':loginPage(),
-    '/signup':signUpPage()
+    '/':homePage()
+    
 }
 
 const Router = function(pathname){
