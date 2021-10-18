@@ -1,4 +1,6 @@
 import homePage from "../pages/homePage";
+import toDo from "../pages/toDo";
+import notFound from "../pages/pageNotFound";
 /* 
     Object 
     Routes  
@@ -9,7 +11,9 @@ import homePage from "../pages/homePage";
  
 
 const routes = {
-    '/':homePage()
+    '/':homePage(),
+    '/toDo':toDo(),
+    '/pageNotFound':notFound()
     
 }
 
