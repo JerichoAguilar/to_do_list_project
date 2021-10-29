@@ -20,6 +20,7 @@
   "homepage": "https://github.com/JerichoAguilar/to_do_list_project#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "gulp": "^4.0.2",
     "http-server": "^13.0.2",
     "parcel": "^2.0.0-rc.0",
     "sass": "^1.42.1"
