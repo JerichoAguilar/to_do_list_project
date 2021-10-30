@@ -1,11 +1,26 @@
-import Router from './routes/router'
-/* 
-       Routing
-       - Routing is javascript way of linking js files
-       Router is code that changes the default behavour of the browser
-       when it comes to handeling a request for a location
-         - Route path to to a javascript file.
-       - Anchor href ===> url /path.html
-*/
+import { Router } from './routes/router'
+import { createStore, getStore } from './redux/store'
+import { dataFetcher } from './utils/dataFetcher'
+import { keyGenerator } from './utils/keys'
 
-Router('/' )
+
+const app = document.querySelector("#app");
+
+//Data Fetcher
+
+// const onAppInit = async function(e){
+//   // fetch data for the to do list
+//   // pull data -- store data --- display data
+//   const todolist = await dataFetcher('./data/todos.json')
+//   // keygenerator is for data that has no unique key
+//   //creating new data to do key
+//   // importing multiple data sets create new data in your app
+//   //build the data store for the app
+//   createStore(keyGenerator(todolist))
+
+  
+// }
+// window.addEventListener('load', onAppInit)
+Router(window.location.pathname)
+
+

@@ -1,23 +1,17 @@
 import homePage from "../pages/homePage";
 import toDo from "../pages/toDo";
 import notFound from "../pages/pageNotFound";
-/* 
-    Object 
-    Routes  
-     key       value
-    route    page.js
-*/
-
- 
 
 const routes = {
     '/':homePage(),
-    '/toDo':toDo(),
-    '/pageNotFound':notFound()
-    
+    '/toDo':toDo()
 }
 
 const Router = function(pathname){
+
+    const isValidRoute = Object.keys(routes).find(key=> key===pathname)
+    console.log(isValidRoute)
+
     const app = document.querySelector('#app')
     app.innerHTML = ''
 
@@ -28,11 +22,14 @@ const Router = function(pathname){
 
     )
 
-    app.appendChild(routes[window.location.pathname])
+    if(isValidRoute === undefined){
+        app.append(notFound())
+    }
+    else{
+        app.appendChild(routes[window.location.pathname])
+    }
 
      
 }
 
-
-export {routes}
-export default Router
+export {Router}

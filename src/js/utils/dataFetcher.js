@@ -7,12 +7,12 @@
 
         async ----> promise
 */
-const dataFetcher = async function (url=null){
-    // enter code here
+const dataFetcher = async function (url=undefined){
+
     const reponse = await fetch(url);
-    const data = await reponse.json();
+    const payload = await reponse.json();
     
-    return data;
+    return payload;
 }
 
-export default dataFetcher
+export {dataFetcher}
