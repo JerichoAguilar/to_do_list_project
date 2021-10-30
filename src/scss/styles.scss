@@ -1,5 +1,122 @@
+html{
+    background-color: #4D5E5B;
+}
 body{
-    background-color: #E9F0F3;
+    background-color: #4D5E5B;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #C8D8CD;
+}
+p{
+    color: #263734;
+}
+
+footer{
+    background-color: #8A9F9D;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+}
+footer button{
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#app{
+    display: flex;
+    justify-content: center;
+}
+
+.pageHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D5E5B;
+}
+
+.pageTagline{
+    color: #263734;
+    width: 100%;
+    text-align: center;
+}
+
+.directory{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tasks{
+    width: 100%;
+    margin: 0;
+    flex-basis: 100%;
+    background-color: #8A9F9D;
+}
+
+.tasks p{
+    text-align: center;
+}
+
+.task-description{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.home{
+    border-bottom:10px solid #03045E;
+    border-left:10px solid #03045E;
+}
+
+.school{
+    border-bottom:10px solid #F4A259;
+    border-left:10px solid #F4A259;
+}
+
+
+.health{
+    border-bottom:10px solid #331832;
+    border-left:10px solid #331832;
+}
+
+.friends{
+    border-bottom:10px solid #E49273;
+    border-left:10px solid #E49273;
+}
+
+.work{
+    border-bottom:10px solid #B56576;
+    border-left:10px solid #B56576;
+}
+
+.true{
+
+}
+
+.false{
+
+}
+
+.to-do-item button{
+    border: none;
+    padding: 10px;
+    background-color: transparent;
 }
 
 // Accent Colour #8A9F9D

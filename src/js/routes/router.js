@@ -1,17 +1,20 @@
 import homePage from "../pages/homePage";
 import toDo from "../pages/toDo";
 import notFound from "../pages/pageNotFound";
+import deletePage from "../pages/delete";
 
 const routes = {
-    '/':homePage(),
-    '/toDo':toDo()
+    '/':homePage,
+    '/todo':toDo,
+    '/delete':deletePage
 }
 
-const Router = function(pathname){
+const Router =  function (pathname, params=null)   {
 
     const isValidRoute = Object.keys(routes).find(key=> key===pathname)
     console.log(isValidRoute)
-
+   
+    // loading and unloading pages into the div app
     const app = document.querySelector('#app')
     app.innerHTML = ''
 
@@ -19,17 +22,14 @@ const Router = function(pathname){
         {},
         pathname,
         window.location.origin + pathname
-
     )
+    
+       if(isValidRoute === undefined){
+           app.append(notFound())
+       }else{
+        app.appendChild(routes[window.location.pathname](params))
+       }
+    
 
-    if(isValidRoute === undefined){
-        app.append(notFound())
-    }
-    else{
-        app.appendChild(routes[window.location.pathname])
-    }
-
-     
 }
-
 export {Router}

@@ -19,4 +19,8 @@ const getStore  = function (){
     return store
 }
 
-export {createStore, getStore}
+const updateStore = function (newState){
+    store = [...newState]
+}
+
+export {createStore, getStore, updateStore}

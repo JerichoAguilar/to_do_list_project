@@ -1,56 +1,50 @@
 import levelHeading from './../components/ui/levelHeading'
 import directory from '../components/cards/directory'
 import link from './../components/ui/link'
-import { createStore, getStore } from '../redux/store'
-import { listitem } from '../components/cards/listitem'
-import { keyGenerator } from '../utils/keys'
-import { dataFetcher } from '../utils/dataFetcher'
+import {getStore} from '../redux/store'
+import {listitem} from '../components/cards/listitem'
+import {Router} from "~/src/js/routes/router"
+import {render} from 'ejs'
 
 
 const toDo = function (){
     const page = document.createElement('div');
     const pageHeader = levelHeading();
     const container = directory();
-    const homelink = link('home', '/');
+    const homelink = link('Home', '/');
     page.append(pageHeader)
     pageHeader.append(homelink)
 
+    function cleanUp(){
+        const tasks = container.querySelectorAll('li');
+        tasks.forEach(task=>{
+            task.removeEventListener('click', onDeleteTask)
+        })
+    }
 
-
-    const onAppInit = async function(e){
-        // fetch data for the to do list
-        // pull data -- store data --- display data
-        const todolist = await dataFetcher('./data/todos.json')
-        // keygenerator is for data that has no unique key
-        //creating new data to do key
-        // importing multiple data sets create new data in your app
-        
-        //build the data store for the app
-        createStore(keyGenerator(todolist))
-        console.log(getStore())
-
-        if(getStore().length !== 0){
-            const elements =  getStore().map(task=>{
-                   return listitem(task) 
-              })
-            const ul = container.querySelector('#tasks')
-            elements.forEach(elm=>{
-                ul.append(elm)
-            })
-            page.append(container)
-          }
-        
-      }
-      window.addEventListener('load', onAppInit)
-    
-    
-    
-
-    
-    
-
+    function onDeleteTask(e){
+        const taskID = {id:e.currentTarget.parentElement.dataset.key};
+        cleanUp();
+        Router('/delete', taskID);
+    }
+    function render(){
+        const ul = container.querySelector("ul")
+        ul.innerHTML=""
+        //creating the mpty cards from the data
+        const elements = getStore().map(task=> listitem(task))
+        //looping task
+        //add event listener for any additional elements
+        elements.forEach(element=>{
+            element.querySelector('#delete').addEventListener('click', onDeleteTask)
+            ul.append(element)
+        })
+        page.append(container)
+    }
+    render();
     return page
 }
+
+    
 
 
 

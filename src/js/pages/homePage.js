@@ -3,7 +3,7 @@ import link from '../components/ui/link'
 
 const homePage = function (){
     const pageHeader = levelHeading()
-    const toDoAppLink = link('to do app', '/toDo')
+    const toDoAppLink = link('To-Do App', '/todo')
     
     pageHeader.append(toDoAppLink)
     return pageHeader

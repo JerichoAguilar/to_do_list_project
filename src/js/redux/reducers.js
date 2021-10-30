@@ -20,17 +20,24 @@
               replace the existing data with the new data paylaod
 
 */
-import {getStore} from './../redux/store'
+import {getStore, updateStore} from './../redux/store'
 
-const reducers = function({action,payload, ...rest}){
-     
+
+const reducer = function(action){
+     console.log(action);
   switch(action.type){
       case "edit": return "edit a task";
-      case "delete": return "remove a task";
+      case "delete":
+        const store = getStore()
+        const index = action.payload.index
+        const newState = [...store.slice(0,index), ...store.slice(index+1)]
+        updateStore(newState); 
+        action.cb();
+        return null;
       case "add": return "add a new task";
       default: return getStore()
   }
 
 }
 
-export {reducers}
+export {reducer}

@@ -4,7 +4,7 @@ import logo from '../ui/logo'
 
 const levelHeading = function (){
      const homeHeader = header('pageHeader')
-     const pageLogo = logo('#4D5E5B', '500px', '500px')
+     const pageLogo = logo('#C8D8CD', '250px', '250px')
      const pageTagline = tagline('p','pageTagline','A simple and aesthetic To-Do list')
 
      homeHeader.append(pageLogo)

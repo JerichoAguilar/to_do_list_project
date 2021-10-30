@@ -3,31 +3,51 @@
         "id":"qw3er57u",
         "category":"home",
         "description":"Do the laundry",
-        "isComplete":true
+        "isComplete":true,
+        "startDate": "Friday October 29th",
+        "startTime": "9:00AM",
+        "endDate": "Friday October 29th",
+        "endTime": "9:00AM"
     },
     {
         "id":"kj7sy21l",
         "category":"school",
         "description":"Finish Assignment 1 for DMIT2008",
-        "isComplete":true
+        "isComplete":true,
+        "startDate": "Friday October 29th",
+        "startTime": "9:00AM",
+        "endDate": "Friday October 29th",
+        "endTime": "9:00AM"
     },
     {
         "id":"v7d243c8",
         "category":"health",
         "description":"Go for a run",
-        "isComplete":true
+        "isComplete":true,
+        "startDate": "Friday October 29th",
+        "startTime": "9:00AM",
+        "endDate": "Friday October 29th",
+        "endTime": "9:00AM"
     },
     {
         "id":"ds687ds2",
         "category":"friends",
         "description":"Have a coffee with John",
-        "isComplete":true
+        "isComplete":false,
+        "startDate": "Friday October 29th",
+        "startTime": "9:00AM",
+        "endDate": "Friday October 29th",
+        "endTime": "9:00AM"
     }
     ,
     {
         "id":"a8sze5d7",
         "category":"work",
         "description":"Read Emails",
-        "isComplete":true
+        "isComplete":false,
+        "startDate": "Friday October 29th",
+        "startTime": "9:00AM",
+        "endDate": "Friday October 29th",
+        "endTime": "9:00AM"
     }
 ]
