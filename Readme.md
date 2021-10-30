@@ -19,6 +19,6 @@ To view the Web Application on your own web browser use command in the console:
 npm start
 ```
 
-This will create a link in your console to open the local host file.
+This will create a link in your console to open the local host file. Here is also running build on [Netlify](https://objective-clarke-4cf2af.netlify.app)
 
 Currently the application only displays the data from the to-do.json file and has to functionality to add or edit tasks, however this is a "psuedo" delete feature that will delete the tasks in the Store. They will return when the page is reloaded.
