@@ -10,7 +10,7 @@ const app = document.querySelector("#app");
 const onAppInit = async function(e){
   // fetch data for the to do list
   // pull data -- store data --- display data
-  const todolist = await dataFetcher('./static/data/todos.json')
+  const todolist = await dataFetcher('../data/todos.json')
   // keygenerator is for data that has no unique key
   //creating new data to do key
   // importing multiple data sets create new data in your app
