@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "default": "src/index.html",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run static && npx parcel src/index.html",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/JerichoAguilar/to_do_list_project/issues"
   },
-  "homepage": "https://github.com/JerichoAguilar/to_do_list_project#readme",
+  "homepage": ".",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "gulp": "^4.0.2",
