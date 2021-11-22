@@ -8,7 +8,8 @@ const routes = {
     '/':homePage,
     '/todo':toDo,
     '/delete':deletePage,
-    '/edit' :editPage
+    '/edit' :editPage,
+    '/*' :notFound
 }
 
 const Router =  function (pathname, params=null)   {
