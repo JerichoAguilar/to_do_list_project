@@ -3,13 +3,19 @@
 //  require()
 // ES Modules import Browser JS Framework or Vanilla.js
 // export export default
-const {src,dest} = require('gulp')
+const {src, dest, series} = require('gulp')
 
 
 const static = function(){
-    return  src('src/static/data/*.*').pipe(dest('dist/data'))
+    return( src('src/static/data/**')
+    .pipe(dest('dist/static')))
+    
+}
+
+function redirect(){
+    return (src('./_redirects').pipe(dest('./dist')))
 }
 
 
-exports.default = static
+exports.default = series(static, redirect)
  

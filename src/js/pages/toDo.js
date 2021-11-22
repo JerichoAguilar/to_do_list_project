@@ -23,19 +23,27 @@ const toDo = function (){
     }
 
     function onDeleteTask(e){
-        const taskID = {id:e.currentTarget.parentElement.dataset.key};
+        const taskContent = {id:e.currentTarget.parentElement.dataset.key, desc:e.currentTarget.parentElement.dataset.desc, due:e.currentTarget.parentElement.dataset.due, iscomplete:e.currentTarget.parentElement.dataset.iscomplete, category:e.currentTarget.parentElement.dataset.category};
+        console.log(taskContent)
         cleanUp();
-        Router('/delete', taskID);
+        Router('/delete', taskContent);
+    }
+    function onEditTask(e){
+        const taskContent = {id:e.currentTarget.parentElement.dataset.key, desc:e.currentTarget.parentElement.dataset.desc, due:e.currentTarget.parentElement.dataset.due, iscomplete:e.currentTarget.parentElement.dataset.iscomplete, category:e.currentTarget.parentElement.dataset.category};
+        console.log(taskContent)
+        cleanUp();
+        Router('/edit', taskContent);
     }
     function render(){
         const ul = container.querySelector("ul")
         ul.innerHTML=""
-        //creating the mpty cards from the data
+        //creating the empty cards from the data
         const elements = getStore().map(task=> listitem(task))
         //looping task
         //add event listener for any additional elements
         elements.forEach(element=>{
             element.querySelector('#delete').addEventListener('click', onDeleteTask)
+            element.querySelector('#edit').addEventListener('click', onEditTask)
             ul.append(element)
         })
         page.append(container)

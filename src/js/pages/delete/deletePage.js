@@ -42,9 +42,10 @@ const deletePage = function (props) {
     cancelButton.addEventListener('click', onCancelDelete)
     const page = document.createElement('div')
     let headerTemplate = `
-        <header class="welcome center-in-page ${styles.deletePage}">
+        <header class="welcome center-in-page ${Object.values(props)[4]}">
             <h1>Delete Task</h1>
-                <p>delete Task with ID ${props}</p> 
+                <p>Delete Task ${Object.values(props)[1]}</p>
+                <p>${Object.values(props)[2]}</p>  
             <div></div>
         </header>
         `
